@@ -1,5 +1,6 @@
 import React from 'react';
 import Item from './Item';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Content extends React.Component {
   componentDidMount () {
@@ -15,7 +16,20 @@ class Content extends React.Component {
   }
   render () {
     const items = this.items.map(item => <Item record={item} key={item.name} />);
-    return <div><ul>{items}</ul></div>;
+    return (<div><table class='table'>
+      <thead class='thead-dark'>
+        <tr>
+          <th scope='col'>#</th>
+          <th scope='col'>Name</th>
+          <th scope='col'>Price</th>
+          <th scope='col'>Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items}
+      </tbody>
+    </table>
+    </div>);
   }
 }
 

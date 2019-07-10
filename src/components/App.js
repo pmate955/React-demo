@@ -12,6 +12,7 @@ class App extends React.Component {
         <Row>
           <Col xs={12}>
             <Header title={'asd'} />
+            <br /><br /><br />
           </Col>
         </Row>
         <Row>
@@ -22,11 +23,11 @@ class App extends React.Component {
             <Content />
           </Col>
         </Row>
-        <Row>
-          <Footer />
-        </Row>
+        <Footer />
+        <Row />
 
       </Container>
+
     );
   }
 }
